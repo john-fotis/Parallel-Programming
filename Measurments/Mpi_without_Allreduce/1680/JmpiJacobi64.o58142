@@ -1,0 +1,139 @@
+mpiP: 
+mpiP: mpiP V3.5.0 (Build Nov 11 2020/13:45:15)
+mpiP: 
+[MPI process 1] Coords: (0, 1).
+[MPI process 2] Coords: (0, 2).
+[MPI process 3] Coords: (0, 3).
+[MPI process 4] Coords: (0, 4).
+[MPI process 5] Coords: (0, 5).
+[MPI process 6] Coords: (0, 6).
+[MPI process 7] Coords: (0, 7).
+[MPI process 0] Coords: (0, 0).
+[MPI process 32] Coords: (4, 0).
+[MPI process 16] Coords: (2, 0).
+[MPI process 41] Coords: (5, 1).
+[MPI process 33] Coords: (4, 1).
+[MPI process 48] Coords: (6, 0).
+[MPI process 17] Coords: (2, 1).
+[MPI process 35] Coords: (4, 3).
+[MPI process 25] Coords: (3, 1).
+[MPI process 8] Coords: (1, 0).
+[MPI process 42] Coords: (5, 2).
+[MPI process 49] Coords: (6, 1).
+[MPI process 57] Coords: (7, 1).
+[MPI process 19] Coords: (2, 3).
+[MPI process 36] Coords: (4, 4).
+[MPI process 26] Coords: (3, 2).
+[MPI process 9] Coords: (1, 1).
+[MPI process 43] Coords: (5, 3).
+[MPI process 51] Coords: (6, 3).
+[MPI process 58] Coords: (7, 2).
+[MPI process 20] Coords: (2, 4).
+[MPI process 37] Coords: (4, 5).
+[MPI process 27] Coords: (3, 3).
+[MPI process 10] Coords: (1, 2).
+[MPI process 40] Coords: (5, 0).
+[MPI process 52] Coords: (6, 4).
+[MPI process 59] Coords: (7, 3).
+[MPI process 21] Coords: (2, 5).
+[MPI process 38] Coords: (4, 6).
+[MPI process 28] Coords: (3, 4).
+[MPI process 11] Coords: (1, 3).
+[MPI process 44] Coords: (5, 4).
+[MPI process 54] Coords: (6, 6).
+[MPI process 62] Coords: (7, 6).
+[MPI process 22] Coords: (2, 6).
+[MPI process 39] Coords: (4, 7).
+[MPI process 30] Coords: (3, 6).
+[MPI process 13] Coords: (1, 5).
+[MPI process 45] Coords: (5, 5).
+[MPI process 50] Coords: (6, 2).
+[MPI process 60] Coords: (7, 4).
+[MPI process 18] Coords: (2, 2).
+[MPI process 29] Coords: (3, 5).
+[MPI process 14] Coords: (1, 6).
+[MPI process 46] Coords: (5, 6).
+[MPI process 53] Coords: (6, 5).
+[MPI process 61] Coords: (7, 5).
+[MPI process 31] Coords: (3, 7).
+[MPI process 15] Coords: (1, 7).
+[MPI process 47] Coords: (5, 7).
+[MPI process 63] Coords: (7, 7).
+[MPI process 12] Coords: (1, 4).
+[MPI process 55] Coords: (6, 7).
+[MPI process 23] Coords: (2, 7).
+[MPI process 56] Coords: (7, 0).
+[MPI process 24] Coords: (3, 0).
+[MPI process 34] Coords: (4, 2).
+Rank 7-> Iterations= 50 Elapsed MPI Wall time is 0.040239
+Rank 6-> Iterations= 50 Elapsed MPI Wall time is 0.041073
+Rank 15-> Iterations= 50 Elapsed MPI Wall time is 0.050025
+Rank 23-> Iterations= 50 Elapsed MPI Wall time is 0.041545
+Rank 5-> Iterations= 50 Elapsed MPI Wall time is 0.044270
+Rank 14-> Iterations= 50 Elapsed MPI Wall time is 0.050816
+Rank 31-> Iterations= 50 Elapsed MPI Wall time is 0.051222
+Rank 22-> Iterations= 50 Elapsed MPI Wall time is 0.049521
+Rank 63-> Iterations= 50 Elapsed MPI Wall time is 0.051644
+Rank 13-> Iterations= 50 Elapsed MPI Wall time is 0.051604
+Rank 4-> Iterations= 50 Elapsed MPI Wall time is 0.051397
+Rank 39-> Iterations= 50 Elapsed MPI Wall time is 0.042705
+Rank 30-> Iterations= 50 Elapsed MPI Wall time is 0.052011
+Rank 62-> Iterations= 50 Elapsed MPI Wall time is 0.052485
+Rank 21-> Iterations= 50 Elapsed MPI Wall time is 0.049182
+Rank 55-> Iterations= 50 Elapsed MPI Wall time is 0.043193
+Rank 12-> Iterations= 50 Elapsed MPI Wall time is 0.052334
+Rank 38-> Iterations= 50 Elapsed MPI Wall time is 0.050746
+Rank 47-> Iterations= 50 Elapsed MPI Wall time is 0.052415
+Rank 29-> Iterations= 50 Elapsed MPI Wall time is 0.052635
+Rank 3-> Iterations= 50 Elapsed MPI Wall time is 0.043568
+Rank 20-> Iterations= 50 Elapsed MPI Wall time is 0.052643
+Rank 54-> Iterations= 50 Elapsed MPI Wall time is 0.051212
+Rank 2-> Iterations= 50 Elapsed MPI Wall time is 0.044500
+Rank 61-> Iterations= 50 Elapsed MPI Wall time is 0.053261
+Rank 11-> Iterations= 50 Elapsed MPI Wall time is 0.053067
+Rank 46-> Iterations= 50 Elapsed MPI Wall time is 0.053224
+Rank 37-> Iterations= 50 Elapsed MPI Wall time is 0.050279
+Rank 28-> Iterations= 50 Elapsed MPI Wall time is 0.053345
+Rank 19-> Iterations= 50 Elapsed MPI Wall time is 0.044436
+Rank 53-> Iterations= 50 Elapsed MPI Wall time is 0.050833
+Rank 60-> Iterations= 50 Elapsed MPI Wall time is 0.053830
+Rank 10-> Iterations= 50 Elapsed MPI Wall time is 0.053759
+Rank 1-> Iterations= 50 Elapsed MPI Wall time is 0.053499
+Rank 45-> Iterations= 50 Elapsed MPI Wall time is 0.054016
+Rank 36-> Iterations= 50 Elapsed MPI Wall time is 0.053723
+Rank 27-> Iterations= 50 Elapsed MPI Wall time is 0.054333
+Rank 18-> Iterations= 50 Elapsed MPI Wall time is 0.053643
+Rank 52-> Iterations= 50 Elapsed MPI Wall time is 0.054288
+Rank 9-> Iterations= 50 Elapsed MPI Wall time is 0.054460
+Rank 59-> Iterations= 50 Elapsed MPI Wall time is 0.054790
+Rank 44-> Iterations= 50 Elapsed MPI Wall time is 0.054732
+Rank 35-> Iterations= 50 Elapsed MPI Wall time is 0.045507
+Rank 26-> Iterations= 50 Elapsed MPI Wall time is 0.055014
+Rank 17-> Iterations= 50 Elapsed MPI Wall time is 0.054772
+Rank 8-> Iterations= 50 Elapsed MPI Wall time is 0.055053
+Rank 51-> Iterations= 50 Elapsed MPI Wall time is 0.046015
+Rank 58-> Iterations= 50 Elapsed MPI Wall time is 0.055513
+Rank 43-> Iterations= 50 Elapsed MPI Wall time is 0.055453
+Rank 34-> Iterations= 50 Elapsed MPI Wall time is 0.046883
+Rank 25-> Iterations= 50 Elapsed MPI Wall time is 0.055717
+Rank 50-> Iterations= 50 Elapsed MPI Wall time is 0.055476
+Rank 57-> Iterations= 50 Elapsed MPI Wall time is 0.056240
+Rank 42-> Iterations= 50 Elapsed MPI Wall time is 0.056125
+Rank 33-> Iterations= 50 Elapsed MPI Wall time is 0.055883
+Rank 24-> Iterations= 50 Elapsed MPI Wall time is 0.056354
+Rank 16-> Iterations= 50 Elapsed MPI Wall time is 0.056731
+Rank 49-> Iterations= 50 Elapsed MPI Wall time is 0.056454
+Rank 56-> Iterations= 50 Elapsed MPI Wall time is 0.057065
+Rank 41-> Iterations= 50 Elapsed MPI Wall time is 0.056798
+Rank 48-> Iterations= 50 Elapsed MPI Wall time is 0.057791
+Rank 0-> Iterations= 50 Elapsed MPI Wall time is 0.057973
+Rank 40-> Iterations= 50 Elapsed MPI Wall time is 0.057280
+Rank 32-> Iterations= 50 Elapsed MPI Wall time is 0.057971
+mpiP: 
+mpiP: Storing mpiP output in [./jacobi_mpi.x.64.195977.1.mpiP].
+mpiP: 
+
+
+Residual 6.74279e-10
+Time taken 0 seconds 179 milliseconds
+The error of the iterative solution is 0.000317239

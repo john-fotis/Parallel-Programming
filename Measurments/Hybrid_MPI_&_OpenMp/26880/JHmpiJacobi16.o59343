@@ -1,0 +1,20 @@
+mpiP: 
+mpiP: mpiP V3.5.0 (Build Nov 11 2020/13:45:15)
+mpiP: 
+[MPI process 1] Coords: (0, 1).
+[MPI process 0] Coords: (0, 0).
+From Rank: 0-> 26880, 26880, 0.8, 1, 1e-13, 50
+[MPI process 2] Coords: (1, 0).
+[MPI process 3] Coords: (1, 1).
+Rank 2-> Iterations= 50 Elapsed MPI Wall time is 56.059017
+Rank 3-> Iterations= 50 Elapsed MPI Wall time is 56.360884
+Rank 1-> Iterations= 50 Elapsed MPI Wall time is 56.362245
+Rank 0-> Iterations= 50 Elapsed MPI Wall time is 56.362955
+mpiP: 
+mpiP: Storing mpiP output in [./jacobi_h_mpi.x.4.133881.1.mpiP].
+mpiP: 
+
+
+Residual 1.65023e-13
+Time taken 56 seconds 498 milliseconds
+The error of the iterative solution is 1.98405e-05

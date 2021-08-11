@@ -1,0 +1,11 @@
+mpiP: 
+mpiP: mpiP V3.5.0 (Build Nov 11 2020/13:45:15)
+mpiP: 
+->n= 13440, m=13440,alpha= 0.8, relax=1, tol=1e-13, mits=50
+TIME=  16.17684 Processes=36
+
+Iterations=  50 Residual 1.32058e-12
+The error of the iterative solution is 3.96795e-05
+mpiP: 
+mpiP: Storing mpiP output in [./jacobiMPI.x.36.86989.1.mpiP].
+mpiP: 

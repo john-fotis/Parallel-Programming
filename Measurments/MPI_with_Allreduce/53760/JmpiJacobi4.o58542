@@ -1,0 +1,7 @@
+mpiP: 
+mpiP: mpiP V3.5.0 (Build Nov 11 2020/13:45:15)
+mpiP: 
+[MPI process 1] Coords: (0, 1).
+[MPI process 2] Coords: (1, 0).
+[MPI process 3] Coords: (1, 1).
+[MPI process 0] Coords: (0, 0).

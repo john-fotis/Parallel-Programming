@@ -1,0 +1,654 @@
+@ mpiP
+@ Command : jacobiMPI.x 
+@ Version                  : 3.5.0
+@ MPIP Build date          : Nov 11 2020, 13:45:15
+@ Start time               : 2021 02 20 16:33:02
+@ Stop time                : 2021 02 20 16:33:02
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : [null]
+@ Collector Rank           : 0
+@ Collector PID            : 179064
+@ Final Output Dir         : .
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 argo-c0
+@ MPI Task Assignment      : 1 argo-c0
+@ MPI Task Assignment      : 2 argo-c0
+@ MPI Task Assignment      : 3 argo-c0
+@ MPI Task Assignment      : 4 argo-c0
+@ MPI Task Assignment      : 5 argo-c0
+@ MPI Task Assignment      : 6 argo-c0
+@ MPI Task Assignment      : 7 argo-c0
+@ MPI Task Assignment      : 8 argo-c1
+@ MPI Task Assignment      : 9 argo-c1
+@ MPI Task Assignment      : 10 argo-c1
+@ MPI Task Assignment      : 11 argo-c1
+@ MPI Task Assignment      : 12 argo-c1
+@ MPI Task Assignment      : 13 argo-c1
+@ MPI Task Assignment      : 14 argo-c1
+@ MPI Task Assignment      : 15 argo-c1
+@ MPI Task Assignment      : 16 argo-c2
+@ MPI Task Assignment      : 17 argo-c2
+@ MPI Task Assignment      : 18 argo-c2
+@ MPI Task Assignment      : 19 argo-c2
+@ MPI Task Assignment      : 20 argo-c2
+@ MPI Task Assignment      : 21 argo-c2
+@ MPI Task Assignment      : 22 argo-c2
+@ MPI Task Assignment      : 23 argo-c2
+@ MPI Task Assignment      : 24 argo-c3
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0     0.0605     0.0277    45.85
+   1      0.102     0.0679    66.75
+   2      0.101     0.0684    67.50
+   3      0.101     0.0673    66.56
+   4     0.0961     0.0622    64.72
+   5     0.0995     0.0666    66.96
+   6     0.0953     0.0604    63.40
+   7     0.0959     0.0631    65.80
+   8     0.0962     0.0623    64.78
+   9     0.0895     0.0557    62.24
+  10     0.0876     0.0548    62.60
+  11     0.0853     0.0515    60.36
+  12     0.0827     0.0499    60.38
+  13     0.0809     0.0472    58.27
+  14     0.0791     0.0432    54.58
+  15     0.0765     0.0437    57.18
+  16     0.0748      0.041    54.84
+  17     0.0732     0.0378    51.60
+  18     0.0713     0.0375    52.63
+  19     0.0689     0.0352    51.00
+  20     0.0667     0.0339    50.86
+  21     0.0649     0.0312    48.00
+  22     0.0632     0.0304    48.15
+  23     0.0611     0.0273    44.63
+  24     0.0589     0.0251    42.59
+   *       2.03       1.19    58.62
+---------------------------------------------------------------------------
+@--- Callsites: 75 --------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct             MPI_Call
+  1   0 jacobiMPI.c           47 swap_halos               Sendrecv
+  2   0 jacobiMPI.c           50 swap_halos               Sendrecv
+  3   0 jacobiMPI.c          276 main                     Allreduce
+  4   0 0x14cb46bc62e2           [unknown]                Sendrecv
+  5   0 0x14cb46bc62e2           [unknown]                Sendrecv
+  6   0 0x14cb46bb9c32           [unknown]                Allreduce
+  7   0 0x1548de56b2e2           [unknown]                Sendrecv
+  8   0 0x1548de56b2e2           [unknown]                Sendrecv
+  9   0 0x1548de55ec32           [unknown]                Allreduce
+ 10   0 0x15223a58b2e2           [unknown]                Sendrecv
+ 11   0 0x15223a58b2e2           [unknown]                Sendrecv
+ 12   0 0x15223a57ec32           [unknown]                Allreduce
+ 13   0 0x152c7dc152e2           [unknown]                Sendrecv
+ 14   0 0x152c7dc152e2           [unknown]                Sendrecv
+ 15   0 0x152c7dc08c32           [unknown]                Allreduce
+ 16   0 0x1478f5d192e2           [unknown]                Sendrecv
+ 17   0 0x1478f5d192e2           [unknown]                Sendrecv
+ 18   0 0x1478f5d0cc32           [unknown]                Allreduce
+ 19   0 0x14b3c863a2e2           [unknown]                Sendrecv
+ 20   0 0x14b3c863a2e2           [unknown]                Sendrecv
+ 21   0 0x14b3c862dc32           [unknown]                Allreduce
+ 22   0 0x154ccd72b2e2           [unknown]                Sendrecv
+ 23   0 0x154ccd72b2e2           [unknown]                Sendrecv
+ 24   0 0x154ccd71ec32           [unknown]                Allreduce
+ 25   0 0x15496c0e92e2           [unknown]                Sendrecv
+ 26   0 0x15496c0dcc32           [unknown]                Allreduce
+ 27   0 0x15496c0e92e2           [unknown]                Sendrecv
+ 28   0 0x1480602e22e2           [unknown]                Sendrecv
+ 29   0 0x1480602e22e2           [unknown]                Sendrecv
+ 30   0 0x1480602d5c32           [unknown]                Allreduce
+ 31   0 0x147dac3162e2           [unknown]                Sendrecv
+ 32   0 0x147dac309c32           [unknown]                Allreduce
+ 33   0 0x147dac3162e2           [unknown]                Sendrecv
+ 34   0 0x1505439eb2e2           [unknown]                Sendrecv
+ 35   0 0x1505439eb2e2           [unknown]                Sendrecv
+ 36   0 0x1505439dec32           [unknown]                Allreduce
+ 37   0 0x154efc3d52e2           [unknown]                Sendrecv
+ 38   0 0x154efc3c8c32           [unknown]                Allreduce
+ 39   0 0x154efc3d52e2           [unknown]                Sendrecv
+ 40   0 0x14f6867382e2           [unknown]                Sendrecv
+ 41   0 0x14f68672bc32           [unknown]                Allreduce
+ 42   0 0x14f6867382e2           [unknown]                Sendrecv
+ 43   0 0x147793c8d2e2           [unknown]                Sendrecv
+ 44   0 0x147793c80c32           [unknown]                Allreduce
+ 45   0 0x147793c8d2e2           [unknown]                Sendrecv
+ 46   0 0x15427e2352e2           [unknown]                Sendrecv
+ 47   0 0x15427e2352e2           [unknown]                Sendrecv
+ 48   0 0x15427e228c32           [unknown]                Allreduce
+ 49   0 0x145713f092e2           [unknown]                Sendrecv
+ 50   0 0x145713efcc32           [unknown]                Allreduce
+ 51   0 0x145713f092e2           [unknown]                Sendrecv
+ 52   0 0x14efc301d2e2           [unknown]                Sendrecv
+ 53   0 0x14efc3010c32           [unknown]                Allreduce
+ 54   0 0x14efc301d2e2           [unknown]                Sendrecv
+ 55   0 0x1510f73f72e2           [unknown]                Sendrecv
+ 56   0 0x1510f73f72e2           [unknown]                Sendrecv
+ 57   0 0x1510f73eac32           [unknown]                Allreduce
+ 58   0 0x1499d88dd2e2           [unknown]                Sendrecv
+ 59   0 0x1499d88d0c32           [unknown]                Allreduce
+ 60   0 0x1499d88dd2e2           [unknown]                Sendrecv
+ 61   0 0x14e2450652e2           [unknown]                Sendrecv
+ 62   0 0x14e245058c32           [unknown]                Allreduce
+ 63   0 0x14e2450652e2           [unknown]                Sendrecv
+ 64   0 0x149d8974c2e2           [unknown]                Sendrecv
+ 65   0 0x149d8974c2e2           [unknown]                Sendrecv
+ 66   0 0x149d8973fc32           [unknown]                Allreduce
+ 67   0 0x15419e0df2e2           [unknown]                Sendrecv
+ 68   0 0x15419e0df2e2           [unknown]                Sendrecv
+ 69   0 0x15419e0d2c32           [unknown]                Allreduce
+ 70   0 0x154cfdb9a2e2           [unknown]                Sendrecv
+ 71   0 0x154cfdb9a2e2           [unknown]                Sendrecv
+ 72   0 0x154cfdb8dc32           [unknown]                Allreduce
+ 73   0 0x14db9a9522e2           [unknown]                Sendrecv
+ 74   0 0x14db9a9522e2           [unknown]                Sendrecv
+ 75   0 0x14db9a945c32           [unknown]                Allreduce
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%      Count    COV
+Allreduce              21       65.4    3.22    5.49         50   0.00
+Allreduce              24       58.8    2.90    4.94         50   0.00
+Allreduce              12       57.7    2.84    4.84         50   0.00
+Allreduce               9       56.1    2.76    4.71         50   0.00
+Allreduce              18         56    2.75    4.70         50   0.00
+Allreduce              62         50    2.46    4.20         50   0.00
+Allreduce              26         48    2.36    4.03         50   0.00
+Allreduce              53       46.2    2.27    3.88         50   0.00
+Allreduce              15       45.7    2.25    3.84         50   0.00
+Allreduce              50       43.5    2.14    3.65         50   0.00
+Allreduce              44       42.5    2.09    3.57         50   0.00
+Sendrecv                4       42.4    2.09    3.56         50   0.00
+Allreduce              32       41.5    2.04    3.49         50   0.00
+Allreduce              41       37.5    1.85    3.15         50   0.00
+Allreduce              48       32.3    1.59    2.71         50   0.00
+Allreduce              30       31.6    1.56    2.65         50   0.00
+Allreduce              75       29.7    1.46    2.49         50   0.00
+Allreduce              36       28.6    1.41    2.40         50   0.00
+Allreduce              72       28.4    1.40    2.38         50   0.00
+Allreduce              38         26    1.28    2.18         50   0.00
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Sendrecv               65         50   3.37e+05   6.74e+03   2.00
+Sendrecv               64         50   3.37e+05   6.74e+03   2.00
+Sendrecv               67         50   3.37e+05   6.74e+03   2.00
+Sendrecv               68         50   3.37e+05   6.74e+03   2.00
+Sendrecv               71         50   3.37e+05   6.74e+03   2.00
+Sendrecv               70         50   3.37e+05   6.74e+03   2.00
+Sendrecv               73         50   3.37e+05   6.74e+03   2.00
+Sendrecv               74         50   3.37e+05   6.74e+03   2.00
+Sendrecv               17         50   3.37e+05   6.74e+03   2.00
+Sendrecv               16         50   3.37e+05   6.74e+03   2.00
+Sendrecv               19         50   3.37e+05   6.74e+03   2.00
+Sendrecv               20         50   3.37e+05   6.74e+03   2.00
+Sendrecv               23         50   3.37e+05   6.74e+03   2.00
+Sendrecv               22         50   3.37e+05   6.74e+03   2.00
+Sendrecv               25         50   3.37e+05   6.74e+03   2.00
+Sendrecv               27         50   3.37e+05   6.74e+03   2.00
+Sendrecv               29         50   3.37e+05   6.74e+03   2.00
+Sendrecv               28         50   3.37e+05   6.74e+03   2.00
+Sendrecv               31         50   3.37e+05   6.74e+03   2.00
+Sendrecv                1         50   3.37e+05   6.74e+03   2.00
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 75 ---------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Allreduce            3    0     50     2.18    0.508    0.373  41.95  91.50
+Allreduce            3    *     50     2.18    0.508    0.373   1.25   2.13
+
+Allreduce            6    1     50     2.14    0.409    0.276  20.13  30.16
+Allreduce            6    *     50     2.14    0.409    0.276   1.01   1.72
+
+Allreduce            9    5     50       37     1.12    0.309  56.40  84.23
+Allreduce            9    *     50       37     1.12    0.309   2.76   4.71
+
+Allreduce           12    6     50       37     1.15    0.256  60.54  95.50
+Allreduce           12    *     50       37     1.15    0.256   2.84   4.84
+
+Allreduce           15    7     50     36.3    0.914   0.0336  47.67  72.45
+Allreduce           15    *     50     36.3    0.914   0.0336   2.25   3.84
+
+Allreduce           18    4     50     37.7     1.12    0.294  58.23  89.97
+Allreduce           18    *     50     37.7     1.12    0.294   2.75   4.70
+
+Allreduce           21    2     50     42.7     1.31     0.28  64.50  95.56
+Allreduce           21    *     50     42.7     1.31     0.28   3.22   5.49
+
+Allreduce           24    3     50     37.1     1.18    0.278  58.19  87.43
+Allreduce           24    *     50     37.1     1.18    0.278   2.90   4.94
+
+Allreduce           26    9     50     29.1     0.96    0.332  53.65  86.19
+Allreduce           26    *     50     29.1     0.96    0.332   2.36   4.03
+
+Allreduce           30   17     50     12.7    0.633    0.308  43.20  83.72
+Allreduce           30    *     50     12.7    0.633    0.308   1.56   2.65
+
+Allreduce           32   13     50     20.6     0.83     0.36  51.30  88.04
+Allreduce           32    *     50     20.6     0.83     0.36   2.04   3.49
+
+Allreduce           36   19     50     8.36    0.572    0.323  41.47  81.32
+Allreduce           36    *     50     8.36    0.572    0.323   1.41   2.40
+
+Allreduce           38   15     50     16.2     0.52   0.0887  34.00  59.47
+Allreduce           38    *     50     16.2     0.52   0.0887   1.28   2.18
+
+Allreduce           41   14     50     17.7    0.751    0.339  47.44  86.92
+Allreduce           41    *     50     17.7    0.751    0.339   1.85   3.15
+
+Allreduce           44   12     50     22.7     0.85    0.355  51.42  85.16
+Allreduce           44    *     50     22.7     0.85    0.355   2.09   3.57
+
+Allreduce           48   18     50     10.8    0.645    0.376  45.25  85.98
+Allreduce           48    *     50     10.8    0.645    0.376   1.59   2.71
+
+Allreduce           50    8     50       31     0.87    0.187  45.18  69.74
+Allreduce           50    *     50       31     0.87    0.187   2.14   3.65
+
+Allreduce           53   11     50     24.6    0.924    0.336  54.16  89.73
+Allreduce           53    *     50     24.6    0.924    0.336   2.27   3.88
+
+Allreduce           57   21     50     4.88    0.505    0.277  38.87  80.98
+Allreduce           57    *     50     4.88    0.505    0.277   1.24   2.12
+
+Allreduce           59   24     50    0.752    0.326     0.22  27.66  64.93
+Allreduce           59    *     50    0.752    0.326     0.22   0.80   1.37
+
+Allreduce           62   10     50     27.3        1    0.365  57.12  91.26
+Allreduce           62    *     50     27.3        1    0.365   2.46   4.20
+
+Allreduce           66   23     50    0.577    0.174   0.0358  14.26  31.95
+Allreduce           66    *     50    0.577    0.174   0.0358   0.43   0.73
+
+Allreduce           69   22     50     2.55      0.5     0.33  39.58  82.20
+Allreduce           69    *     50     2.55      0.5     0.33   1.23   2.10
+
+Allreduce           72   20     50      6.8    0.568    0.341  42.52  83.61
+Allreduce           72    *     50      6.8    0.568    0.341   1.40   2.38
+
+Allreduce           75   16     50     14.7    0.593     0.27  39.67  72.34
+Allreduce           75    *     50     14.7    0.593     0.27   1.46   2.49
+
+Sendrecv             1    0     50    0.149    0.018  0.00889   1.49   3.24
+Sendrecv             1    *     50    0.149    0.018  0.00889   0.04   0.08
+
+Sendrecv             2    0     50    0.202   0.0292   0.0188   2.41   5.26
+Sendrecv             2    *     50    0.202   0.0292   0.0188   0.07   0.12
+
+Sendrecv             4    1     50     41.3    0.849   0.0181  41.74  62.53
+Sendrecv             4    *     50     41.3    0.849   0.0181   2.09   3.56
+
+Sendrecv             5    1     50    0.373   0.0992   0.0218   4.88   7.31
+Sendrecv             5    *     50    0.373   0.0992   0.0218   0.24   0.42
+
+Sendrecv             7    5     50     3.57   0.0949     0.02   4.77   7.12
+Sendrecv             7    *     50     3.57   0.0949     0.02   0.23   0.40
+
+Sendrecv             8    5     50    0.969    0.115    0.016   5.79   8.65
+Sendrecv             8    *     50    0.969    0.115    0.016   0.28   0.48
+
+Sendrecv            10    6     50    0.254   0.0206   0.0109   1.08   1.70
+Sendrecv            10    *     50    0.254   0.0206   0.0109   0.05   0.09
+
+Sendrecv            11    6     50    0.265   0.0338   0.0214   1.77   2.80
+Sendrecv            11    *     50    0.265   0.0338   0.0214   0.08   0.14
+
+Sendrecv            13    7     50    0.978   0.0453   0.0218   2.36   3.59
+Sendrecv            13    *     50    0.978   0.0453   0.0218   0.11   0.19
+
+Sendrecv            14    7     50    0.834    0.302    0.269  15.77  23.96
+Sendrecv            14    *     50    0.834    0.302    0.269   0.74   1.27
+
+Sendrecv            16    4     50    0.272    0.105   0.0304   5.45   8.43
+Sendrecv            16    *     50    0.272    0.105   0.0304   0.26   0.44
+
+Sendrecv            17    4     50   0.0911     0.02   0.0133   1.04   1.61
+Sendrecv            17    *     50   0.0911     0.02   0.0133   0.05   0.08
+
+Sendrecv            19    2     50    0.195   0.0242   0.0151   1.19   1.77
+Sendrecv            19    *     50    0.195   0.0242   0.0151   0.06   0.10
+
+Sendrecv            20    2     50    0.549   0.0366    0.021   1.81   2.68
+Sendrecv            20    *     50    0.549   0.0366    0.021   0.09   0.15
+
+Sendrecv            22    3     50     0.41   0.0343   0.0205   1.69   2.54
+Sendrecv            22    *     50     0.41   0.0343   0.0205   0.08   0.14
+
+Sendrecv            23    3     50     5.75    0.135   0.0174   6.68  10.03
+Sendrecv            23    *     50     5.75    0.135   0.0174   0.33   0.57
+
+Sendrecv            25    9     50    0.336   0.0333   0.0203   1.86   2.99
+Sendrecv            25    *     50    0.336   0.0333   0.0203   0.08   0.14
+
+Sendrecv            27    9     50     2.06     0.12   0.0194   6.73  10.82
+Sendrecv            27    *     50     2.06     0.12   0.0194   0.30   0.51
+
+Sendrecv            28   17     50     0.39   0.0371   0.0166   2.53   4.91
+Sendrecv            28    *     50     0.39   0.0371   0.0166   0.09   0.16
+
+Sendrecv            29   17     50     1.93   0.0859   0.0154   5.87  11.37
+Sendrecv            29    *     50     1.93   0.0859   0.0154   0.21   0.36
+
+Sendrecv            31   13     50    0.206   0.0297   0.0211   1.84   3.15
+Sendrecv            31    *     50    0.206   0.0297   0.0211   0.07   0.12
+
+Sendrecv            33   13     50     2.08   0.0831   0.0167   5.13   8.81
+Sendrecv            33    *     50     2.08   0.0831   0.0167   0.20   0.35
+
+Sendrecv            34   19     50    0.334   0.0638   0.0171   4.63   9.08
+Sendrecv            34    *     50    0.334   0.0638   0.0171   0.16   0.27
+
+Sendrecv            35   19     50     2.26   0.0675   0.0169   4.90   9.60
+Sendrecv            35    *     50     2.26   0.0675   0.0169   0.17   0.28
+
+Sendrecv            37   15     50    0.749   0.0404   0.0217   2.64   4.62
+Sendrecv            37    *     50    0.749   0.0404   0.0217   0.10   0.17
+
+Sendrecv            39   15     50     1.57    0.314    0.268  20.53  35.91
+Sendrecv            39    *     50     1.57    0.314    0.268   0.77   1.32
+
+Sendrecv            40   14     50    0.348   0.0274   0.0109   1.73   3.17
+Sendrecv            40    *     50    0.348   0.0274   0.0109   0.07   0.12
+
+Sendrecv            42   14     50     3.06   0.0855   0.0178   5.40   9.90
+Sendrecv            42    *     50     3.06   0.0855   0.0178   0.21   0.36
+
+Sendrecv            43   12     50     0.34    0.095   0.0255   5.74   9.51
+Sendrecv            43    *     50     0.34    0.095   0.0255   0.23   0.40
+
+Sendrecv            45   12     50     1.73   0.0532   0.0158   3.22   5.33
+Sendrecv            45    *     50     1.73   0.0532   0.0158   0.13   0.22
+
+Sendrecv            46   18     50    0.298   0.0358   0.0166   2.51   4.77
+Sendrecv            46    *     50    0.298   0.0358   0.0166   0.09   0.15
+
+Sendrecv            47   18     50     2.36   0.0694   0.0143   4.87   9.25
+Sendrecv            47    *     50     2.36   0.0694   0.0143   0.17   0.29
+
+Sendrecv            49    8     50     1.64    0.244   0.0896  12.66  19.54
+Sendrecv            49    *     50     1.64    0.244   0.0896   0.60   1.02
+
+Sendrecv            51    8     50     5.51    0.134   0.0211   6.94  10.72
+Sendrecv            51    *     50     5.51    0.134   0.0211   0.33   0.56
+
+Sendrecv            52   11     50    0.181   0.0293   0.0208   1.72   2.85
+Sendrecv            52    *     50    0.181   0.0293   0.0208   0.07   0.12
+
+Sendrecv            54   11     50      2.7   0.0764   0.0184   4.48   7.42
+Sendrecv            54    *     50      2.7   0.0764   0.0184   0.19   0.32
+
+Sendrecv            55   21     50    0.199   0.0586   0.0138   4.51   9.39
+Sendrecv            55    *     50    0.199   0.0586   0.0138   0.14   0.25
+
+Sendrecv            56   21     50     1.79     0.06   0.0145   4.62   9.63
+Sendrecv            56    *     50     1.79     0.06   0.0145   0.15   0.25
+
+Sendrecv            58   24     50    0.201    0.154   0.0972  13.05  30.64
+Sendrecv            58    *     50    0.201    0.154   0.0972   0.38   0.65
+
+Sendrecv            60   24     50    0.208   0.0222    0.015   1.89   4.43
+Sendrecv            60    *     50    0.208   0.0222    0.015   0.05   0.09
+
+Sendrecv            61   10     50    0.333   0.0301   0.0164   1.72   2.74
+Sendrecv            61    *     50    0.333   0.0301   0.0164   0.07   0.13
+
+Sendrecv            63   10     50     2.16   0.0658   0.0186   3.76   6.00
+Sendrecv            63    *     50     2.16   0.0658   0.0186   0.16   0.28
+
+Sendrecv            64   23     50    0.632   0.0746   0.0249   6.10  13.68
+Sendrecv            64    *     50    0.632   0.0746   0.0249   0.18   0.31
+
+Sendrecv            65   23     50     2.09    0.297   0.0405  24.26  54.37
+Sendrecv            65    *     50     2.09    0.297   0.0405   0.73   1.25
+
+Sendrecv            67   22     50    0.197   0.0332   0.0177   2.62   5.45
+Sendrecv            67    *     50    0.197   0.0332   0.0177   0.08   0.14
+
+Sendrecv            68   22     50     2.62   0.0752   0.0168   5.95  12.35
+Sendrecv            68    *     50     2.62   0.0752   0.0168   0.18   0.32
+
+Sendrecv            70   20     50     0.22   0.0287   0.0203   2.15   4.23
+Sendrecv            70    *     50     0.22   0.0287   0.0203   0.07   0.12
+
+Sendrecv            71   20     50      1.8   0.0825   0.0215   6.18  12.15
+Sendrecv            71    *     50      1.8   0.0825   0.0215   0.20   0.35
+
+Sendrecv            73   16     50    0.301    0.169   0.0656  11.31  20.62
+Sendrecv            73    *     50    0.301    0.169   0.0656   0.42   0.71
+
+Sendrecv            74   16     50     1.73   0.0578   0.0211   3.86   7.05
+Sendrecv            74    *     50     1.73   0.0578   0.0211   0.14   0.24
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Allreduce            3    0      50         8         8         8       400
+Allreduce            3    *      50         8         8         8       400
+
+Allreduce            6    1      50         8         8         8       400
+Allreduce            6    *      50         8         8         8       400
+
+Allreduce            9    5      50         8         8         8       400
+Allreduce            9    *      50         8         8         8       400
+
+Allreduce           12    6      50         8         8         8       400
+Allreduce           12    *      50         8         8         8       400
+
+Allreduce           15    7      50         8         8         8       400
+Allreduce           15    *      50         8         8         8       400
+
+Allreduce           18    4      50         8         8         8       400
+Allreduce           18    *      50         8         8         8       400
+
+Allreduce           21    2      50         8         8         8       400
+Allreduce           21    *      50         8         8         8       400
+
+Allreduce           24    3      50         8         8         8       400
+Allreduce           24    *      50         8         8         8       400
+
+Allreduce           26    9      50         8         8         8       400
+Allreduce           26    *      50         8         8         8       400
+
+Allreduce           30   17      50         8         8         8       400
+Allreduce           30    *      50         8         8         8       400
+
+Allreduce           32   13      50         8         8         8       400
+Allreduce           32    *      50         8         8         8       400
+
+Allreduce           36   19      50         8         8         8       400
+Allreduce           36    *      50         8         8         8       400
+
+Allreduce           38   15      50         8         8         8       400
+Allreduce           38    *      50         8         8         8       400
+
+Allreduce           41   14      50         8         8         8       400
+Allreduce           41    *      50         8         8         8       400
+
+Allreduce           44   12      50         8         8         8       400
+Allreduce           44    *      50         8         8         8       400
+
+Allreduce           48   18      50         8         8         8       400
+Allreduce           48    *      50         8         8         8       400
+
+Allreduce           50    8      50         8         8         8       400
+Allreduce           50    *      50         8         8         8       400
+
+Allreduce           53   11      50         8         8         8       400
+Allreduce           53    *      50         8         8         8       400
+
+Allreduce           57   21      50         8         8         8       400
+Allreduce           57    *      50         8         8         8       400
+
+Allreduce           59   24      50         8         8         8       400
+Allreduce           59    *      50         8         8         8       400
+
+Allreduce           62   10      50         8         8         8       400
+Allreduce           62    *      50         8         8         8       400
+
+Allreduce           66   23      50         8         8         8       400
+Allreduce           66    *      50         8         8         8       400
+
+Allreduce           69   22      50         8         8         8       400
+Allreduce           69    *      50         8         8         8       400
+
+Allreduce           72   20      50         8         8         8       400
+Allreduce           72    *      50         8         8         8       400
+
+Allreduce           75   16      50         8         8         8       400
+Allreduce           75    *      50         8         8         8       400
+
+Sendrecv             1    0      50      6736      6736      6736 3.368e+05
+Sendrecv             1    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv             2    0      50      6736      6736      6736 3.368e+05
+Sendrecv             2    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv             4    1      50      6736      6736      6736 3.368e+05
+Sendrecv             4    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv             5    1      50      6736      6736      6736 3.368e+05
+Sendrecv             5    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv             7    5      50      6736      6736      6736 3.368e+05
+Sendrecv             7    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv             8    5      50      6736      6736      6736 3.368e+05
+Sendrecv             8    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            10    6      50      6736      6736      6736 3.368e+05
+Sendrecv            10    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            11    6      50      6736      6736      6736 3.368e+05
+Sendrecv            11    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            13    7      50      6736      6736      6736 3.368e+05
+Sendrecv            13    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            14    7      50      6736      6736      6736 3.368e+05
+Sendrecv            14    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            16    4      50      6736      6736      6736 3.368e+05
+Sendrecv            16    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            17    4      50      6736      6736      6736 3.368e+05
+Sendrecv            17    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            19    2      50      6736      6736      6736 3.368e+05
+Sendrecv            19    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            20    2      50      6736      6736      6736 3.368e+05
+Sendrecv            20    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            22    3      50      6736      6736      6736 3.368e+05
+Sendrecv            22    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            23    3      50      6736      6736      6736 3.368e+05
+Sendrecv            23    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            25    9      50      6736      6736      6736 3.368e+05
+Sendrecv            25    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            27    9      50      6736      6736      6736 3.368e+05
+Sendrecv            27    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            28   17      50      6736      6736      6736 3.368e+05
+Sendrecv            28    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            29   17      50      6736      6736      6736 3.368e+05
+Sendrecv            29    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            31   13      50      6736      6736      6736 3.368e+05
+Sendrecv            31    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            33   13      50      6736      6736      6736 3.368e+05
+Sendrecv            33    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            34   19      50      6736      6736      6736 3.368e+05
+Sendrecv            34    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            35   19      50      6736      6736      6736 3.368e+05
+Sendrecv            35    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            37   15      50      6736      6736      6736 3.368e+05
+Sendrecv            37    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            39   15      50      6736      6736      6736 3.368e+05
+Sendrecv            39    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            40   14      50      6736      6736      6736 3.368e+05
+Sendrecv            40    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            42   14      50      6736      6736      6736 3.368e+05
+Sendrecv            42    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            43   12      50      6736      6736      6736 3.368e+05
+Sendrecv            43    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            45   12      50      6736      6736      6736 3.368e+05
+Sendrecv            45    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            46   18      50      6736      6736      6736 3.368e+05
+Sendrecv            46    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            47   18      50      6736      6736      6736 3.368e+05
+Sendrecv            47    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            49    8      50      6736      6736      6736 3.368e+05
+Sendrecv            49    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            51    8      50      6736      6736      6736 3.368e+05
+Sendrecv            51    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            52   11      50      6736      6736      6736 3.368e+05
+Sendrecv            52    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            54   11      50      6736      6736      6736 3.368e+05
+Sendrecv            54    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            55   21      50      6736      6736      6736 3.368e+05
+Sendrecv            55    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            56   21      50      6736      6736      6736 3.368e+05
+Sendrecv            56    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            58   24      50      6736      6736      6736 3.368e+05
+Sendrecv            58    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            60   24      50      6736      6736      6736 3.368e+05
+Sendrecv            60    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            61   10      50      6736      6736      6736 3.368e+05
+Sendrecv            61    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            63   10      50      6736      6736      6736 3.368e+05
+Sendrecv            63    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            64   23      50      6736      6736      6736 3.368e+05
+Sendrecv            64    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            65   23      50      6736      6736      6736 3.368e+05
+Sendrecv            65    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            67   22      50      6736      6736      6736 3.368e+05
+Sendrecv            67    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            68   22      50      6736      6736      6736 3.368e+05
+Sendrecv            68    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            70   20      50      6736      6736      6736 3.368e+05
+Sendrecv            70    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            71   20      50      6736      6736      6736 3.368e+05
+Sendrecv            71    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            73   16      50      6736      6736      6736 3.368e+05
+Sendrecv            73    *      50      6736      6736      6736 3.368e+05
+
+Sendrecv            74   16      50      6736      6736      6736 3.368e+05
+Sendrecv            74    *      50      6736      6736      6736 3.368e+05
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------

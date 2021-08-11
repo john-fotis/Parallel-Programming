@@ -1,0 +1,52 @@
+mpiP: 
+mpiP: mpiP V3.5.0 (Build Nov 11 2020/13:45:15)
+mpiP: 
+[MPI process 1] Coords: (0, 1).
+[MPI process 0] Coords: (0, 0).
+From Rank: 0-> 13440, 13440, 0.8, 1, 1e-13, 50
+[MPI process 2] Coords: (0, 2).
+[MPI process 4] Coords: (0, 4).
+[MPI process 8] Coords: (1, 3).
+[MPI process 3] Coords: (0, 3).
+[MPI process 5] Coords: (1, 0).
+[MPI process 9] Coords: (1, 4).
+[MPI process 13] Coords: (2, 3).
+[MPI process 14] Coords: (2, 4).
+[MPI process 12] Coords: (2, 2).
+[MPI process 10] Coords: (2, 0).
+[MPI process 6] Coords: (1, 1).
+[MPI process 18] Coords: (3, 3).
+[MPI process 15] Coords: (3, 0).
+[MPI process 16] Coords: (3, 1).
+[MPI process 11] Coords: (2, 1).
+[MPI process 7] Coords: (1, 2).
+[MPI process 19] Coords: (3, 4).
+[MPI process 17] Coords: (3, 2).
+Rank 5-> Iterations= 50 Elapsed MPI Wall time is 2.852784
+Rank 15-> Iterations= 50 Elapsed MPI Wall time is 2.852735
+Rank 14-> Iterations= 50 Elapsed MPI Wall time is 2.859636
+Rank 19-> Iterations= 50 Elapsed MPI Wall time is 2.873187
+Rank 18-> Iterations= 50 Elapsed MPI Wall time is 2.873326
+Rank 16-> Iterations= 50 Elapsed MPI Wall time is 2.874011
+Rank 17-> Iterations= 50 Elapsed MPI Wall time is 2.873703
+Rank 7-> Iterations= 50 Elapsed MPI Wall time is 2.877546
+Rank 4-> Iterations= 50 Elapsed MPI Wall time is 2.878061
+Rank 6-> Iterations= 50 Elapsed MPI Wall time is 2.877660
+Rank 3-> Iterations= 50 Elapsed MPI Wall time is 2.879220
+Rank 2-> Iterations= 50 Elapsed MPI Wall time is 2.879285
+Rank 13-> Iterations= 50 Elapsed MPI Wall time is 2.881059
+Rank 12-> Iterations= 50 Elapsed MPI Wall time is 2.881385
+Rank 1-> Iterations= 50 Elapsed MPI Wall time is 2.887755
+Rank 9-> Iterations= 50 Elapsed MPI Wall time is 2.896776
+Rank 0-> Iterations= 50 Elapsed MPI Wall time is 2.908679
+Rank 10-> Iterations= 50 Elapsed MPI Wall time is 2.908132
+Rank 11-> Iterations= 50 Elapsed MPI Wall time is 2.908105
+Rank 8-> Iterations= 50 Elapsed MPI Wall time is 2.908996
+mpiP: 
+mpiP: Storing mpiP output in [./jacobi_h_mpi.x.20.238797.1.mpiP].
+mpiP: 
+
+
+Residual 1.31833e-12
+Time taken 3 seconds 21 milliseconds
+The error of the iterative solution is 3.96795e-05

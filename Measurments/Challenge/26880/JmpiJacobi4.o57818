@@ -1,0 +1,10 @@
+mpiP: 
+mpiP: mpiP V3.5.0 (Build Nov 11 2020/13:45:15)
+mpiP: 
+->n= 26880, m=26880,alpha= 0.8, relax=1, tol=1e-13, mits=50
+TIME= 218.78570 Processes= 4
+
+Iterations=  50 Residual 1.65078e-13
+The error of the iterative solution is 1.98405e-05
+[1613837252.459865] [argo-c2:107295:0]           sock.c:344  UCX  ERROR recv(fd=30) failed: Connection reset by peer
+[1613837252.459980] [argo-c2:107295:0]           sock.c:344  UCX  ERROR sendv(fd=-1) failed: Bad file descriptor

@@ -1,0 +1,988 @@
+@ mpiP
+@ Command : jacobi_mpi.x 
+@ Version                  : 3.5.0
+@ MPIP Build date          : Nov 11 2020, 13:45:15
+@ Start time               : 2021 02 21 00:09:20
+@ Stop time                : 2021 02 21 00:09:21
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : [null]
+@ Collector Rank           : 0
+@ Collector PID            : 118700
+@ Final Output Dir         : .
+@ Report generation        : Single collector task
+@ MPI Task Assignment      : 0 argo-c2
+@ MPI Task Assignment      : 1 argo-c2
+@ MPI Task Assignment      : 2 argo-c2
+@ MPI Task Assignment      : 3 argo-c2
+@ MPI Task Assignment      : 4 argo-c2
+@ MPI Task Assignment      : 5 argo-c3
+@ MPI Task Assignment      : 6 argo-c3
+@ MPI Task Assignment      : 7 argo-c3
+@ MPI Task Assignment      : 8 argo-c3
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0       1.18     0.0383     3.23
+   1       1.18      0.325    27.43
+   2       1.19      0.301    25.41
+   3       1.19     0.0405     3.41
+   4       1.18      0.326    27.57
+   5       1.18      0.331    27.96
+   6       1.19      0.332    27.98
+   7       1.19      0.331    27.94
+   8       1.19      0.323    27.24
+   *       10.7       2.35    22.02
+---------------------------------------------------------------------------
+@--- Callsites: 189 -------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct             MPI_Call
+  1   0 jacobi_mpi.c         224 main                     Irecv
+  2   0 jacobi_mpi.c         250 main                     Wait
+  3   0 jacobi_mpi.c         230 main                     Isend
+  4   0 jacobi_mpi.c         251 main                     Wait
+  5   0 jacobi_mpi.c         207 main                     Type_commit
+  6   0 jacobi_mpi.c         248 main                     Wait
+  7   0 jacobi_mpi.c         297 main                     Allreduce
+  8   0 jacobi_mpi.c         249 main                     Wait
+  9   0 jacobi_mpi.c         225 main                     Irecv
+ 10   0 jacobi_mpi.c         229 main                     Isend
+ 11   0 jacobi_mpi.c         310 main                     Wait
+ 12   0 jacobi_mpi.c         308 main                     Wait
+ 13   0 jacobi_mpi.c         309 main                     Wait
+ 14   0 jacobi_mpi.c         228 main                     Isend
+ 15   0 jacobi_mpi.c         226 main                     Irecv
+ 16   0 jacobi_mpi.c         203 main                     Type_commit
+ 17   0 jacobi_mpi.c         192 main                     Cart_shift
+ 18   0 jacobi_mpi.c         307 main                     Wait
+ 19   0 jacobi_mpi.c         193 main                     Cart_shift
+ 20   0 jacobi_mpi.c         231 main                     Isend
+ 21   0 jacobi_mpi.c         223 main                     Irecv
+ 22   0 0x14ebc3e96a0a           [unknown]                Irecv
+ 23   0 0x14ebc3e9bafd           [unknown]                Wait
+ 24   0 0x14ebc3e97c7a           [unknown]                Isend
+ 25   0 0x14ebc3e9bafd           [unknown]                Wait
+ 26   0 0x14ebc3e9b40d           [unknown]                Type_commit
+ 27   0 0x14ebc3e9bafd           [unknown]                Wait
+ 28   0 0x14ebc3e8dc32           [unknown]                Allreduce
+ 29   0 0x14ebc3e9bafd           [unknown]                Wait
+ 30   0 0x14ebc3e96a0a           [unknown]                Irecv
+ 31   0 0x14ebc3e97c7a           [unknown]                Isend
+ 32   0 0x14ebc3e9bafd           [unknown]                Wait
+ 33   0 0x14ebc3e9bafd           [unknown]                Wait
+ 34   0 0x14ebc3e9bafd           [unknown]                Wait
+ 35   0 0x14ebc3e97c7a           [unknown]                Isend
+ 36   0 0x14ebc3e96a0a           [unknown]                Irecv
+ 37   0 0x14ebc3e9b40d           [unknown]                Type_commit
+ 38   0 0x14ebc3e8f486           [unknown]                Cart_shift
+ 39   0 0x14ebc3e9bafd           [unknown]                Wait
+ 40   0 0x14ebc3e8f486           [unknown]                Cart_shift
+ 41   0 0x14ebc3e97c7a           [unknown]                Isend
+ 42   0 0x14ebc3e96a0a           [unknown]                Irecv
+ 43   0 0x1520330d1a0a           [unknown]                Irecv
+ 44   0 0x1520330d6afd           [unknown]                Wait
+ 45   0 0x1520330d2c7a           [unknown]                Isend
+ 46   0 0x1520330d6afd           [unknown]                Wait
+ 47   0 0x1520330d640d           [unknown]                Type_commit
+ 48   0 0x1520330d6afd           [unknown]                Wait
+ 49   0 0x1520330c8c32           [unknown]                Allreduce
+ 50   0 0x1520330d6afd           [unknown]                Wait
+ 51   0 0x1520330d1a0a           [unknown]                Irecv
+ 52   0 0x1520330d2c7a           [unknown]                Isend
+ 53   0 0x1520330d6afd           [unknown]                Wait
+ 54   0 0x1520330d6afd           [unknown]                Wait
+ 55   0 0x1520330d6afd           [unknown]                Wait
+ 56   0 0x1520330d1a0a           [unknown]                Irecv
+ 57   0 0x1520330d2c7a           [unknown]                Isend
+ 58   0 0x1520330ca486           [unknown]                Cart_shift
+ 59   0 0x1520330d640d           [unknown]                Type_commit
+ 60   0 0x1520330d6afd           [unknown]                Wait
+ 61   0 0x1520330ca486           [unknown]                Cart_shift
+ 62   0 0x1520330d2c7a           [unknown]                Isend
+ 63   0 0x1520330d1a0a           [unknown]                Irecv
+ 64   0 0x152df1bb9a0a           [unknown]                Irecv
+ 65   0 0x152df1bbeafd           [unknown]                Wait
+ 66   0 0x152df1bbac7a           [unknown]                Isend
+ 67   0 0x152df1bbeafd           [unknown]                Wait
+ 68   0 0x152df1bbe40d           [unknown]                Type_commit
+ 69   0 0x152df1bbeafd           [unknown]                Wait
+ 70   0 0x152df1bb0c32           [unknown]                Allreduce
+ 71   0 0x152df1bbeafd           [unknown]                Wait
+ 72   0 0x152df1bb9a0a           [unknown]                Irecv
+ 73   0 0x152df1bbac7a           [unknown]                Isend
+ 74   0 0x152df1bbeafd           [unknown]                Wait
+ 75   0 0x152df1bbeafd           [unknown]                Wait
+ 76   0 0x152df1bbeafd           [unknown]                Wait
+ 77   0 0x152df1bb9a0a           [unknown]                Irecv
+ 78   0 0x152df1bbac7a           [unknown]                Isend
+ 79   0 0x152df1bb2486           [unknown]                Cart_shift
+ 80   0 0x152df1bbe40d           [unknown]                Type_commit
+ 81   0 0x152df1bbeafd           [unknown]                Wait
+ 82   0 0x152df1bb2486           [unknown]                Cart_shift
+ 83   0 0x152df1bbac7a           [unknown]                Isend
+ 84   0 0x152df1bb9a0a           [unknown]                Irecv
+ 85   0 0x145b2a90bafd           [unknown]                Wait
+ 86   0 0x145b2a906a0a           [unknown]                Irecv
+ 87   0 0x145b2a907c7a           [unknown]                Isend
+ 88   0 0x145b2a90bafd           [unknown]                Wait
+ 89   0 0x145b2a90bafd           [unknown]                Wait
+ 90   0 0x145b2a90b40d           [unknown]                Type_commit
+ 91   0 0x145b2a90bafd           [unknown]                Wait
+ 92   0 0x145b2a8fdc32           [unknown]                Allreduce
+ 93   0 0x145b2a906a0a           [unknown]                Irecv
+ 94   0 0x145b2a907c7a           [unknown]                Isend
+ 95   0 0x145b2a90bafd           [unknown]                Wait
+ 96   0 0x145b2a90bafd           [unknown]                Wait
+ 97   0 0x145b2a907c7a           [unknown]                Isend
+ 98   0 0x145b2a906a0a           [unknown]                Irecv
+ 99   0 0x145b2a90b40d           [unknown]                Type_commit
+100   0 0x145b2a8ff486           [unknown]                Cart_shift
+101   0 0x145b2a90bafd           [unknown]                Wait
+102   0 0x145b2a90bafd           [unknown]                Wait
+103   0 0x145b2a907c7a           [unknown]                Isend
+104   0 0x145b2a8ff486           [unknown]                Cart_shift
+105   0 0x145b2a906a0a           [unknown]                Irecv
+106   0 0x1478fe63ea0a           [unknown]                Irecv
+107   0 0x1478fe643afd           [unknown]                Wait
+108   0 0x1478fe643afd           [unknown]                Wait
+109   0 0x1478fe63fc7a           [unknown]                Isend
+110   0 0x1478fe64340d           [unknown]                Type_commit
+111   0 0x1478fe643afd           [unknown]                Wait
+112   0 0x1478fe635c32           [unknown]                Allreduce
+113   0 0x1478fe643afd           [unknown]                Wait
+114   0 0x1478fe63ea0a           [unknown]                Irecv
+115   0 0x1478fe63fc7a           [unknown]                Isend
+116   0 0x1478fe643afd           [unknown]                Wait
+117   0 0x1478fe643afd           [unknown]                Wait
+118   0 0x1478fe643afd           [unknown]                Wait
+119   0 0x1478fe64340d           [unknown]                Type_commit
+120   0 0x1478fe637486           [unknown]                Cart_shift
+121   0 0x1478fe63fc7a           [unknown]                Isend
+122   0 0x1478fe63ea0a           [unknown]                Irecv
+123   0 0x1478fe643afd           [unknown]                Wait
+124   0 0x1478fe637486           [unknown]                Cart_shift
+125   0 0x1478fe63fc7a           [unknown]                Isend
+126   0 0x1478fe63ea0a           [unknown]                Irecv
+127   0 0x15391d303a0a           [unknown]                Irecv
+128   0 0x15391d308afd           [unknown]                Wait
+129   0 0x15391d308afd           [unknown]                Wait
+130   0 0x15391d304c7a           [unknown]                Isend
+131   0 0x15391d30840d           [unknown]                Type_commit
+132   0 0x15391d308afd           [unknown]                Wait
+133   0 0x15391d2fac32           [unknown]                Allreduce
+134   0 0x15391d308afd           [unknown]                Wait
+135   0 0x15391d303a0a           [unknown]                Irecv
+136   0 0x15391d304c7a           [unknown]                Isend
+137   0 0x15391d308afd           [unknown]                Wait
+138   0 0x15391d308afd           [unknown]                Wait
+139   0 0x15391d308afd           [unknown]                Wait
+140   0 0x15391d30840d           [unknown]                Type_commit
+141   0 0x15391d2fc486           [unknown]                Cart_shift
+142   0 0x15391d304c7a           [unknown]                Isend
+143   0 0x15391d303a0a           [unknown]                Irecv
+144   0 0x15391d308afd           [unknown]                Wait
+145   0 0x15391d2fc486           [unknown]                Cart_shift
+146   0 0x15391d304c7a           [unknown]                Isend
+147   0 0x15391d303a0a           [unknown]                Irecv
+148   0 0x14a3afb32a0a           [unknown]                Irecv
+149   0 0x14a3afb37afd           [unknown]                Wait
+150   0 0x14a3afb37afd           [unknown]                Wait
+151   0 0x14a3afb33c7a           [unknown]                Isend
+152   0 0x14a3afb3740d           [unknown]                Type_commit
+153   0 0x14a3afb37afd           [unknown]                Wait
+154   0 0x14a3afb29c32           [unknown]                Allreduce
+155   0 0x14a3afb37afd           [unknown]                Wait
+156   0 0x14a3afb32a0a           [unknown]                Irecv
+157   0 0x14a3afb33c7a           [unknown]                Isend
+158   0 0x14a3afb37afd           [unknown]                Wait
+159   0 0x14a3afb37afd           [unknown]                Wait
+160   0 0x14a3afb37afd           [unknown]                Wait
+161   0 0x14a3afb2b486           [unknown]                Cart_shift
+162   0 0x14a3afb3740d           [unknown]                Type_commit
+163   0 0x14a3afb32a0a           [unknown]                Irecv
+164   0 0x14a3afb33c7a           [unknown]                Isend
+165   0 0x14a3afb37afd           [unknown]                Wait
+166   0 0x14a3afb2b486           [unknown]                Cart_shift
+167   0 0x14a3afb33c7a           [unknown]                Isend
+168   0 0x14a3afb32a0a           [unknown]                Irecv
+169   0 0x1464c47a5a0a           [unknown]                Irecv
+170   0 0x1464c47aaafd           [unknown]                Wait
+171   0 0x1464c47aaafd           [unknown]                Wait
+172   0 0x1464c47a6c7a           [unknown]                Isend
+173   0 0x1464c47aa40d           [unknown]                Type_commit
+174   0 0x1464c47aaafd           [unknown]                Wait
+175   0 0x1464c479cc32           [unknown]                Allreduce
+176   0 0x1464c47aaafd           [unknown]                Wait
+177   0 0x1464c47a5a0a           [unknown]                Irecv
+178   0 0x1464c47a6c7a           [unknown]                Isend
+179   0 0x1464c47aaafd           [unknown]                Wait
+180   0 0x1464c47aaafd           [unknown]                Wait
+181   0 0x1464c47aaafd           [unknown]                Wait
+182   0 0x1464c479e486           [unknown]                Cart_shift
+183   0 0x1464c47aa40d           [unknown]                Type_commit
+184   0 0x1464c47a5a0a           [unknown]                Irecv
+185   0 0x1464c47a6c7a           [unknown]                Isend
+186   0 0x1464c47aaafd           [unknown]                Wait
+187   0 0x1464c479e486           [unknown]                Cart_shift
+188   0 0x1464c47a6c7a           [unknown]                Isend
+189   0 0x1464c47a5a0a           [unknown]                Irecv
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%      Count    COV
+Allreduce             175        305    2.86   12.98         50   0.00
+Allreduce             154        299    2.80   12.74         50   0.00
+Allreduce             112        293    2.74   12.46         50   0.00
+Allreduce              92        291    2.73   12.41         50   0.00
+Wait                  128        278    2.61   11.85         50   0.00
+Wait                   23        269    2.52   11.44         50   0.00
+Allreduce              49        266    2.49   11.31         50   0.00
+Wait                   29       29.2    0.27    1.24         50   0.00
+Wait                  132       28.1    0.26    1.20         50   0.00
+Wait                   89       26.2    0.25    1.11         50   0.00
+Wait                   44       22.8    0.21    0.97         50   0.00
+Wait                  111       21.1    0.20    0.90         50   0.00
+Allreduce              28       20.7    0.19    0.88         50   0.00
+Wait                   67       17.6    0.17    0.75         50   0.00
+Wait                  149         16    0.15    0.68         50   0.00
+Wait                   69       14.6    0.14    0.62         50   0.00
+Wait                  174       14.3    0.13    0.61         50   0.00
+Wait                    8       13.2    0.12    0.56         50   0.00
+Allreduce             133       11.3    0.11    0.48         50   0.00
+Allreduce               7       9.87    0.09    0.42         50   0.00
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Isend                  73         50   4.48e+05   8.96e+03   2.78
+Isend                  78         50   4.48e+05   8.96e+03   2.78
+Isend                  66         50   4.48e+05   8.96e+03   2.78
+Isend                  94         50   4.48e+05   8.96e+03   2.78
+Isend                  83         50   4.48e+05   8.96e+03   2.78
+Isend                  87         50   4.48e+05   8.96e+03   2.78
+Isend                 109         50   4.48e+05   8.96e+03   2.78
+Isend                  97         50   4.48e+05   8.96e+03   2.78
+Isend                 103         50   4.48e+05   8.96e+03   2.78
+Isend                 121         50   4.48e+05   8.96e+03   2.78
+Isend                 125         50   4.48e+05   8.96e+03   2.78
+Isend                 115         50   4.48e+05   8.96e+03   2.78
+Isend                  10         50   4.48e+05   8.96e+03   2.78
+Isend                  14         50   4.48e+05   8.96e+03   2.78
+Isend                   3         50   4.48e+05   8.96e+03   2.78
+Isend                  24         50   4.48e+05   8.96e+03   2.78
+Isend                  31         50   4.48e+05   8.96e+03   2.78
+Isend                  20         50   4.48e+05   8.96e+03   2.78
+Isend                  41         50   4.48e+05   8.96e+03   2.78
+Isend                  45         50   4.48e+05   8.96e+03   2.78
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 189 --------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Allreduce            7    0     50     7.52    0.197   0.0336   0.83  25.77
+Allreduce            7    *     50     7.52    0.197   0.0336   0.09   0.42
+
+Allreduce           28    1     50     9.65    0.415    0.123   1.75   6.38
+Allreduce           28    *     50     9.65    0.415    0.123   0.19   0.88
+
+Allreduce           49    2     50     5.68     5.31     4.37  22.39  88.11
+Allreduce           49    *     50     5.68     5.31     4.37   2.49  11.31
+
+Allreduce           70    3     50    0.241   0.0383   0.0277   0.16   4.73
+Allreduce           70    *     50    0.241   0.0383   0.0277   0.02   0.08
+
+Allreduce           92    8     50     12.6     5.83     5.59  24.57  90.21
+Allreduce           92    *     50     12.6     5.83     5.59   2.73  12.41
+
+Allreduce          112    5     50     12.6     5.85      5.6  24.71  88.40
+Allreduce          112    *     50     12.6     5.85      5.6   2.74  12.46
+
+Allreduce          133    4     50     3.86    0.225    0.113   0.95   3.45
+Allreduce          133    *     50     3.86    0.225    0.113   0.11   0.48
+
+Allreduce          154    7     50     12.8     5.98     5.74  25.22  90.28
+Allreduce          154    *     50     12.8     5.98     5.74   2.80  12.74
+
+Allreduce          175    6     50     12.7      6.1     5.83  25.70  91.84
+Allreduce          175    *     50     12.7      6.1     5.83   2.86  12.98
+
+Cart_shift          17    0      1    0.111    0.111    0.111   0.01   0.29
+Cart_shift          17    *      1    0.111    0.111    0.111   0.00   0.00
+
+Cart_shift          19    0      1   0.0101   0.0101   0.0101   0.00   0.03
+Cart_shift          19    *      1   0.0101   0.0101   0.0101   0.00   0.00
+
+Cart_shift          38    1      1    0.178    0.178    0.178   0.02   0.05
+Cart_shift          38    *      1    0.178    0.178    0.178   0.00   0.01
+
+Cart_shift          40    1      1   0.0102   0.0102   0.0102   0.00   0.00
+Cart_shift          40    *      1   0.0102   0.0102   0.0102   0.00   0.00
+
+Cart_shift          58    2      1    0.145    0.145    0.145   0.01   0.05
+Cart_shift          58    *      1    0.145    0.145    0.145   0.00   0.01
+
+Cart_shift          61    2      1  0.00995  0.00995  0.00995   0.00   0.00
+Cart_shift          61    *      1  0.00995  0.00995  0.00995   0.00   0.00
+
+Cart_shift          79    3      1    0.164    0.164    0.164   0.01   0.41
+Cart_shift          79    *      1    0.164    0.164    0.164   0.00   0.01
+
+Cart_shift          82    3      1  0.00969  0.00969  0.00969   0.00   0.02
+Cart_shift          82    *      1  0.00969  0.00969  0.00969   0.00   0.00
+
+Cart_shift         100    8      1    0.139    0.139    0.139   0.01   0.04
+Cart_shift         100    *      1    0.139    0.139    0.139   0.00   0.01
+
+Cart_shift         104    8      1     0.01     0.01     0.01   0.00   0.00
+Cart_shift         104    *      1     0.01     0.01     0.01   0.00   0.00
+
+Cart_shift         120    5      1    0.144    0.144    0.144   0.01   0.04
+Cart_shift         120    *      1    0.144    0.144    0.144   0.00   0.01
+
+Cart_shift         124    5      1  0.00956  0.00956  0.00956   0.00   0.00
+Cart_shift         124    *      1  0.00956  0.00956  0.00956   0.00   0.00
+
+Cart_shift         141    4      1     0.15     0.15     0.15   0.01   0.05
+Cart_shift         141    *      1     0.15     0.15     0.15   0.00   0.01
+
+Cart_shift         145    4      1     0.01     0.01     0.01   0.00   0.00
+Cart_shift         145    *      1     0.01     0.01     0.01   0.00   0.00
+
+Cart_shift         161    7      1    0.153    0.153    0.153   0.01   0.05
+Cart_shift         161    *      1    0.153    0.153    0.153   0.00   0.01
+
+Cart_shift         166    7      1  0.00962  0.00962  0.00962   0.00   0.00
+Cart_shift         166    *      1  0.00962  0.00962  0.00962   0.00   0.00
+
+Cart_shift         182    6      1    0.146    0.146    0.146   0.01   0.04
+Cart_shift         182    *      1    0.146    0.146    0.146   0.00   0.01
+
+Cart_shift         187    6      1  0.00951  0.00951  0.00951   0.00   0.00
+Cart_shift         187    *      1  0.00951  0.00951  0.00951   0.00   0.00
+
+Irecv                1    0     50   0.0251  0.00628  0.00562   0.03   0.82
+Irecv                1    *     50   0.0251  0.00628  0.00562   0.00   0.01
+
+Irecv                9    0     50   0.0233  0.00578  0.00531   0.02   0.75
+Irecv                9    *     50   0.0233  0.00578  0.00531   0.00   0.01
+
+Irecv               15    0     50   0.0194  0.00757  0.00673   0.03   0.99
+Irecv               15    *     50   0.0194  0.00757  0.00673   0.00   0.02
+
+Irecv               21    0     50   0.0239   0.0066   0.0059   0.03   0.86
+Irecv               21    *     50   0.0239   0.0066   0.0059   0.00   0.01
+
+Irecv               22    1     50   0.0105  0.00598   0.0057   0.03   0.09
+Irecv               22    *     50   0.0105  0.00598   0.0057   0.00   0.01
+
+Irecv               30    1     50    0.029  0.00847   0.0077   0.04   0.13
+Irecv               30    *     50    0.029  0.00847   0.0077   0.00   0.02
+
+Irecv               36    1     50   0.0106  0.00586  0.00572   0.02   0.09
+Irecv               36    *     50   0.0106  0.00586  0.00572   0.00   0.01
+
+Irecv               42    1     50   0.0213  0.00703  0.00654   0.03   0.11
+Irecv               42    *     50   0.0213  0.00703  0.00654   0.00   0.01
+
+Irecv               43    2     50     0.01    0.006  0.00581   0.03   0.10
+Irecv               43    *     50     0.01    0.006  0.00581   0.00   0.01
+
+Irecv               51    2     50   0.0243  0.00868  0.00788   0.04   0.14
+Irecv               51    *     50   0.0243  0.00868  0.00788   0.00   0.02
+
+Irecv               56    2     50   0.0178   0.0061  0.00558   0.03   0.10
+Irecv               56    *     50   0.0178   0.0061  0.00558   0.00   0.01
+
+Irecv               63    2     50   0.0209  0.00721  0.00668   0.03   0.12
+Irecv               63    *     50   0.0209  0.00721  0.00668   0.00   0.02
+
+Irecv               64    3     50  0.00968  0.00565  0.00547   0.02   0.70
+Irecv               64    *     50  0.00968  0.00565  0.00547   0.00   0.01
+
+Irecv               72    3     50   0.0234  0.00588  0.00537   0.02   0.73
+Irecv               72    *     50   0.0234  0.00588  0.00537   0.00   0.01
+
+Irecv               77    3     50   0.0362  0.00841  0.00688   0.04   1.04
+Irecv               77    *     50   0.0362  0.00841  0.00688   0.00   0.02
+
+Irecv               84    3     50   0.0257  0.00766  0.00652   0.03   0.95
+Irecv               84    *     50   0.0257  0.00766  0.00652   0.00   0.02
+
+Irecv               86    8     50  0.00922  0.00545  0.00535   0.02   0.08
+Irecv               86    *     50  0.00922  0.00545  0.00535   0.00   0.01
+
+Irecv               93    8     50   0.0257  0.00845  0.00788   0.04   0.13
+Irecv               93    *     50   0.0257  0.00845  0.00788   0.00   0.02
+
+Irecv               98    8     50  0.00954   0.0055  0.00532   0.02   0.09
+Irecv               98    *     50  0.00954   0.0055  0.00532   0.00   0.01
+
+Irecv              105    8     50   0.0219   0.0075  0.00691   0.03   0.12
+Irecv              105    *     50   0.0219   0.0075  0.00691   0.00   0.02
+
+Irecv              106    5     50  0.00969  0.00555  0.00539   0.02   0.08
+Irecv              106    *     50  0.00969  0.00555  0.00539   0.00   0.01
+
+Irecv              114    5     50   0.0263  0.00857  0.00763   0.04   0.13
+Irecv              114    *     50   0.0263  0.00857  0.00763   0.00   0.02
+
+Irecv              122    5     50  0.00975  0.00551   0.0053   0.02   0.08
+Irecv              122    *     50  0.00975  0.00551   0.0053   0.00   0.01
+
+Irecv              126    5     50   0.0211  0.00732  0.00678   0.03   0.11
+Irecv              126    *     50   0.0211  0.00732  0.00678   0.00   0.02
+
+Irecv              127    4     50  0.00982  0.00565  0.00552   0.02   0.09
+Irecv              127    *     50  0.00982  0.00565  0.00552   0.00   0.01
+
+Irecv              135    4     50   0.0241  0.00822  0.00752   0.03   0.13
+Irecv              135    *     50   0.0241  0.00822  0.00752   0.00   0.02
+
+Irecv              143    4     50   0.0109  0.00578  0.00564   0.02   0.09
+Irecv              143    *     50   0.0109  0.00578  0.00564   0.00   0.01
+
+Irecv              147    4     50    0.022  0.00752  0.00693   0.03   0.12
+Irecv              147    *     50    0.022  0.00752  0.00693   0.00   0.02
+
+Irecv              148    7     50  0.00925   0.0056  0.00534   0.02   0.08
+Irecv              148    *     50  0.00925   0.0056  0.00534   0.00   0.01
+
+Irecv              156    7     50    0.031  0.00827  0.00755   0.03   0.12
+Irecv              156    *     50    0.031  0.00827  0.00755   0.00   0.02
+
+Irecv              163    7     50    0.011  0.00578  0.00555   0.02   0.09
+Irecv              163    *     50    0.011  0.00578  0.00555   0.00   0.01
+
+Irecv              168    7     50   0.0209  0.00727  0.00682   0.03   0.11
+Irecv              168    *     50   0.0209  0.00727  0.00682   0.00   0.02
+
+Irecv              169    6     50  0.00951  0.00554  0.00535   0.02   0.08
+Irecv              169    *     50  0.00951  0.00554  0.00535   0.00   0.01
+
+Irecv              177    6     50  0.00884  0.00541  0.00531   0.02   0.08
+Irecv              177    *     50  0.00884  0.00541  0.00531   0.00   0.01
+
+Irecv              184    6     50   0.0245  0.00857  0.00759   0.04   0.13
+Irecv              184    *     50   0.0245  0.00857  0.00759   0.00   0.02
+
+Irecv              189    6     50   0.0219  0.00761  0.00693   0.03   0.11
+Irecv              189    *     50   0.0219  0.00761  0.00693   0.00   0.02
+
+Isend                3    0     50   0.0662  0.00898  0.00698   0.04   1.17
+Isend                3    *     50   0.0662  0.00898  0.00698   0.00   0.02
+
+Isend               10    0     50  0.00993  0.00588  0.00554   0.02   0.77
+Isend               10    *     50  0.00993  0.00588  0.00554   0.00   0.01
+
+Isend               14    0     50   0.0329   0.0106   0.0082   0.04   1.39
+Isend               14    *     50   0.0329   0.0106   0.0082   0.00   0.02
+
+Isend               20    0     50   0.0109  0.00552  0.00533   0.02   0.72
+Isend               20    *     50   0.0109  0.00552  0.00533   0.00   0.01
+
+Isend               24    1     50   0.0491  0.00853  0.00726   0.04   0.13
+Isend               24    *     50   0.0491  0.00853  0.00726   0.00   0.02
+
+Isend               31    1     50   0.0111  0.00617  0.00578   0.03   0.09
+Isend               31    *     50   0.0111  0.00617  0.00578   0.00   0.01
+
+Isend               35    1     50    0.204   0.0158   0.0109   0.07   0.24
+Isend               35    *     50    0.204   0.0158   0.0109   0.01   0.03
+
+Isend               41    1     50    0.045  0.00721  0.00619   0.03   0.11
+Isend               41    *     50    0.045  0.00721  0.00619   0.00   0.02
+
+Isend               45    2     50  0.00942  0.00571  0.00553   0.02   0.09
+Isend               45    *     50  0.00942  0.00571  0.00553   0.00   0.01
+
+Isend               52    2     50   0.0116  0.00715  0.00647   0.03   0.12
+Isend               52    *     50   0.0116  0.00715  0.00647   0.00   0.02
+
+Isend               57    2     50    0.265   0.0486   0.0364   0.20   0.81
+Isend               57    *     50    0.265   0.0486   0.0364   0.02   0.10
+
+Isend               62    2     50    0.121   0.0123  0.00953   0.05   0.20
+Isend               62    *     50    0.121   0.0123  0.00953   0.01   0.03
+
+Isend               66    3     50   0.0561   0.0087   0.0068   0.04   1.08
+Isend               66    *     50   0.0561   0.0087   0.0068   0.00   0.02
+
+Isend               73    3     50    0.157   0.0116  0.00782   0.05   1.44
+Isend               73    *     50    0.157   0.0116  0.00782   0.01   0.02
+
+Isend               78    3     50    0.244   0.0318   0.0215   0.13   3.93
+Isend               78    *     50    0.244   0.0318   0.0215   0.01   0.07
+
+Isend               83    3     50   0.0105  0.00568  0.00544   0.02   0.70
+Isend               83    *     50   0.0105  0.00568  0.00544   0.00   0.01
+
+Isend               87    8     50   0.0112  0.00566  0.00538   0.02   0.09
+Isend               87    *     50   0.0112  0.00566  0.00538   0.00   0.01
+
+Isend               94    8     50    0.201   0.0144  0.00988   0.06   0.22
+Isend               94    *     50    0.201   0.0144  0.00988   0.01   0.03
+
+Isend               97    8     50   0.0237  0.00685   0.0063   0.03   0.11
+Isend               97    *     50   0.0237  0.00685   0.0063   0.00   0.01
+
+Isend              103    8     50    0.128  0.00982  0.00707   0.04   0.15
+Isend              103    *     50    0.128  0.00982  0.00707   0.00   0.02
+
+Isend              109    5     50    0.011  0.00641  0.00614   0.03   0.10
+Isend              109    *     50    0.011  0.00641  0.00614   0.00   0.01
+
+Isend              115    5     50      0.1   0.0302   0.0224   0.13   0.46
+Isend              115    *     50      0.1   0.0302   0.0224   0.01   0.06
+
+Isend              121    5     50   0.0424   0.0118   0.0108   0.05   0.18
+Isend              121    *     50   0.0424   0.0118   0.0108   0.01   0.03
+
+Isend              125    5     50    0.287   0.0504   0.0385   0.21   0.76
+Isend              125    *     50    0.287   0.0504   0.0385   0.02   0.11
+
+Isend              130    4     50    0.288   0.0521   0.0428   0.22   0.80
+Isend              130    *     50    0.288   0.0521   0.0428   0.02   0.11
+
+Isend              136    4     50    0.101   0.0109  0.00817   0.05   0.17
+Isend              136    *     50    0.101   0.0109  0.00817   0.01   0.02
+
+Isend              142    4     50    0.132   0.0308   0.0243   0.13   0.47
+Isend              142    *     50    0.132   0.0308   0.0243   0.01   0.07
+
+Isend              146    4     50   0.0119  0.00786  0.00751   0.03   0.12
+Isend              146    *     50   0.0119  0.00786  0.00751   0.00   0.02
+
+Isend              151    7     50    0.132   0.0125  0.00954   0.05   0.19
+Isend              151    *     50    0.132   0.0125  0.00954   0.01   0.03
+
+Isend              157    7     50    0.222   0.0442   0.0303   0.19   0.67
+Isend              157    *     50    0.222   0.0442   0.0303   0.02   0.09
+
+Isend              164    7     50   0.0206  0.00677  0.00618   0.03   0.10
+Isend              164    *     50   0.0206  0.00677  0.00618   0.00   0.01
+
+Isend              167    7     50   0.0432  0.00732  0.00634   0.03   0.11
+Isend              167    *     50   0.0432  0.00732  0.00634   0.00   0.02
+
+Isend              172    6     50    0.124   0.0127  0.00953   0.05   0.19
+Isend              172    *     50    0.124   0.0127  0.00953   0.01   0.03
+
+Isend              178    6     50    0.223   0.0464   0.0313   0.20   0.70
+Isend              178    *     50    0.223   0.0464   0.0313   0.02   0.10
+
+Isend              185    6     50   0.0205  0.00692  0.00645   0.03   0.10
+Isend              185    *     50   0.0205  0.00692  0.00645   0.00   0.01
+
+Isend              188    6     50   0.0144  0.00562  0.00539   0.02   0.08
+Isend              188    *     50   0.0144  0.00562  0.00539   0.00   0.01
+
+Type_commit          5    0      1  0.00981  0.00981  0.00981   0.00   0.03
+Type_commit          5    *      1  0.00981  0.00981  0.00981   0.00   0.00
+
+Type_commit         16    0      1   0.0202   0.0202   0.0202   0.00   0.05
+Type_commit         16    *      1   0.0202   0.0202   0.0202   0.00   0.00
+
+Type_commit         26    1      1   0.0107   0.0107   0.0107   0.00   0.00
+Type_commit         26    *      1   0.0107   0.0107   0.0107   0.00   0.00
+
+Type_commit         37    1      1   0.0243   0.0243   0.0243   0.00   0.01
+Type_commit         37    *      1   0.0243   0.0243   0.0243   0.00   0.00
+
+Type_commit         47    2      1  0.00998  0.00998  0.00998   0.00   0.00
+Type_commit         47    *      1  0.00998  0.00998  0.00998   0.00   0.00
+
+Type_commit         59    2      1   0.0231   0.0231   0.0231   0.00   0.01
+Type_commit         59    *      1   0.0231   0.0231   0.0231   0.00   0.00
+
+Type_commit         68    3      1  0.00989  0.00989  0.00989   0.00   0.02
+Type_commit         68    *      1  0.00989  0.00989  0.00989   0.00   0.00
+
+Type_commit         80    3      1    0.023    0.023    0.023   0.00   0.06
+Type_commit         80    *      1    0.023    0.023    0.023   0.00   0.00
+
+Type_commit         90    8      1  0.00986  0.00986  0.00986   0.00   0.00
+Type_commit         90    *      1  0.00986  0.00986  0.00986   0.00   0.00
+
+Type_commit         99    8      1   0.0225   0.0225   0.0225   0.00   0.01
+Type_commit         99    *      1   0.0225   0.0225   0.0225   0.00   0.00
+
+Type_commit        110    5      1  0.00972  0.00972  0.00972   0.00   0.00
+Type_commit        110    *      1  0.00972  0.00972  0.00972   0.00   0.00
+
+Type_commit        119    5      1   0.0223   0.0223   0.0223   0.00   0.01
+Type_commit        119    *      1   0.0223   0.0223   0.0223   0.00   0.00
+
+Type_commit        131    4      1   0.0104   0.0104   0.0104   0.00   0.00
+Type_commit        131    *      1   0.0104   0.0104   0.0104   0.00   0.00
+
+Type_commit        140    4      1   0.0222   0.0222   0.0222   0.00   0.01
+Type_commit        140    *      1   0.0222   0.0222   0.0222   0.00   0.00
+
+Type_commit        152    7      1  0.00999  0.00999  0.00999   0.00   0.00
+Type_commit        152    *      1  0.00999  0.00999  0.00999   0.00   0.00
+
+Type_commit        162    7      1   0.0224   0.0224   0.0224   0.00   0.01
+Type_commit        162    *      1   0.0224   0.0224   0.0224   0.00   0.00
+
+Type_commit        173    6      1  0.00968  0.00968  0.00968   0.00   0.00
+Type_commit        173    *      1  0.00968  0.00968  0.00968   0.00   0.00
+
+Type_commit        183    6      1   0.0228   0.0228   0.0228   0.00   0.01
+Type_commit        183    *      1   0.0228   0.0228   0.0228   0.00   0.00
+
+Wait                 2    0     50   0.0107  0.00797  0.00628   0.03   1.04
+Wait                 2    *     50   0.0107  0.00797  0.00628   0.00   0.02
+
+Wait                 4    0     50     9.56    0.197  0.00541   0.83  25.71
+Wait                 4    *     50     9.56    0.197  0.00541   0.09   0.42
+
+Wait                 6    0     50   0.0315   0.0168   0.0135   0.07   2.20
+Wait                 6    *     50   0.0315   0.0168   0.0135   0.01   0.04
+
+Wait                 8    0     50    0.424    0.263    0.164   1.11  34.39
+Wait                 8    *     50    0.424    0.263    0.164   0.12   0.56
+
+Wait                11    0     50  0.00955  0.00556   0.0054   0.02   0.73
+Wait                11    *     50  0.00955  0.00556   0.0054   0.00   0.01
+
+Wait                12    0     50   0.0108  0.00566  0.00544   0.02   0.74
+Wait                12    *     50   0.0108  0.00566  0.00544   0.00   0.01
+
+Wait                13    0     50   0.0231  0.00582  0.00534   0.02   0.76
+Wait                13    *     50   0.0231  0.00582  0.00534   0.00   0.01
+
+Wait                18    0     50    0.021   0.0061  0.00564   0.03   0.80
+Wait                18    *     50    0.021   0.0061  0.00564   0.00   0.01
+
+Wait                23    1     50     5.87     5.38   0.0328  22.70  82.74
+Wait                23    *     50     5.87     5.38   0.0328   2.52  11.44
+
+Wait                25    1     50  0.00975  0.00649  0.00623   0.03   0.10
+Wait                25    *     50  0.00975  0.00649  0.00623   0.00   0.01
+
+Wait                27    1     50   0.0623   0.0224   0.0199   0.09   0.35
+Wait                27    *     50   0.0623   0.0224   0.0199   0.01   0.05
+
+Wait                29    1     50     7.77    0.584    0.387   2.47   8.99
+Wait                29    *     50     7.77    0.584    0.387   0.27   1.24
+
+Wait                32    1     50  0.00936  0.00566  0.00554   0.02   0.09
+Wait                32    *     50  0.00936  0.00566  0.00554   0.00   0.01
+
+Wait                33    1     50  0.00934  0.00569  0.00557   0.02   0.09
+Wait                33    *     50  0.00934  0.00569  0.00557   0.00   0.01
+
+Wait                34    1     50  0.00993  0.00575  0.00555   0.02   0.09
+Wait                34    *     50  0.00993  0.00575  0.00555   0.00   0.01
+
+Wait                39    1     50   0.0111  0.00642  0.00613   0.03   0.10
+Wait                39    *     50   0.0111  0.00642  0.00613   0.00   0.01
+
+Wait                44    2     50     15.8    0.455   0.0931   1.92   7.55
+Wait                44    *     50     15.8    0.455   0.0931   0.21   0.97
+
+Wait                46    2     50   0.0583   0.0101  0.00605   0.04   0.17
+Wait                46    *     50   0.0583   0.0101  0.00605   0.00   0.02
+
+Wait                48    2     50   0.0509   0.0249   0.0231   0.10   0.41
+Wait                48    *     50   0.0509   0.0249   0.0231   0.01   0.05
+
+Wait                50    2     50    0.336    0.097    0.081   0.41   1.61
+Wait                50    *     50    0.336    0.097    0.081   0.05   0.21
+
+Wait                53    2     50   0.0114  0.00572  0.00549   0.02   0.09
+Wait                53    *     50   0.0114  0.00572  0.00549   0.00   0.01
+
+Wait                54    2     50   0.0123  0.00602  0.00576   0.03   0.10
+Wait                54    *     50   0.0123  0.00602  0.00576   0.00   0.01
+
+Wait                55    2     50   0.0105  0.00574  0.00558   0.02   0.10
+Wait                55    *     50   0.0105  0.00574  0.00558   0.00   0.01
+
+Wait                60    2     50   0.0116  0.00647  0.00622   0.03   0.11
+Wait                60    *     50   0.0116  0.00647  0.00622   0.00   0.01
+
+Wait                65    3     50   0.0223   0.0061  0.00556   0.03   0.75
+Wait                65    *     50   0.0223   0.0061  0.00556   0.00   0.01
+
+Wait                67    3     50     17.2    0.352  0.00545   1.49  43.54
+Wait                67    *     50     17.2    0.352  0.00545   0.17   0.75
+
+Wait                69    3     50     1.05    0.292    0.199   1.23  36.09
+Wait                69    *     50     1.05    0.292    0.199   0.14   0.62
+
+Wait                71    3     50   0.0114  0.00714  0.00644   0.03   0.88
+Wait                71    *     50   0.0114  0.00714  0.00644   0.00   0.02
+
+Wait                74    3     50   0.0233  0.00601  0.00543   0.03   0.74
+Wait                74    *     50   0.0233  0.00601  0.00543   0.00   0.01
+
+Wait                75    3     50     0.01  0.00587  0.00561   0.02   0.73
+Wait                75    *     50     0.01  0.00587  0.00561   0.00   0.01
+
+Wait                76    3     50  0.00947  0.00554  0.00538   0.02   0.68
+Wait                76    *     50  0.00947  0.00554  0.00538   0.00   0.01
+
+Wait                81    3     50   0.0114  0.00638  0.00611   0.03   0.79
+Wait                81    *     50   0.0114  0.00638  0.00611   0.00   0.01
+
+Wait                85    8     50  0.00987  0.00578  0.00556   0.02   0.09
+Wait                85    *     50  0.00987  0.00578  0.00556   0.00   0.01
+
+Wait                88    8     50  0.00908  0.00547  0.00535   0.02   0.08
+Wait                88    *     50  0.00908  0.00547  0.00535   0.00   0.01
+
+Wait                89    8     50     9.95    0.523     0.26   2.21   8.10
+Wait                89    *     50     9.95    0.523     0.26   0.25   1.11
+
+Wait                91    8     50   0.0336  0.00762  0.00676   0.03   0.12
+Wait                91    *     50   0.0336  0.00762  0.00676   0.00   0.02
+
+Wait                95    8     50   0.0163  0.00567  0.00535   0.02   0.09
+Wait                95    *     50   0.0163  0.00567  0.00535   0.00   0.01
+
+Wait                96    8     50  0.00917  0.00549  0.00538   0.02   0.08
+Wait                96    *     50  0.00917  0.00549  0.00538   0.00   0.01
+
+Wait               101    8     50  0.00917  0.00552  0.00542   0.02   0.09
+Wait               101    *     50  0.00917  0.00552  0.00542   0.00   0.01
+
+Wait               102    8     50   0.0113   0.0065  0.00624   0.03   0.10
+Wait               102    *     50   0.0113   0.0065  0.00624   0.00   0.01
+
+Wait               107    5     50   0.0212  0.00683  0.00617   0.03   0.10
+Wait               107    *     50   0.0212  0.00683  0.00617   0.00   0.01
+
+Wait               108    5     50  0.00953  0.00581  0.00561   0.02   0.09
+Wait               108    *     50  0.00953  0.00581  0.00561   0.00   0.01
+
+Wait               111    5     50      8.1    0.422    0.228   1.78   6.37
+Wait               111    *     50      8.1    0.422    0.228   0.20   0.90
+
+Wait               113    5     50    0.287    0.181    0.113   0.76   2.73
+Wait               113    *     50    0.287    0.181    0.113   0.08   0.39
+
+Wait               116    5     50  0.00901  0.00543  0.00531   0.02   0.08
+Wait               116    *     50  0.00901  0.00543  0.00531   0.00   0.01
+
+Wait               117    5     50   0.0101  0.00562   0.0054   0.02   0.08
+Wait               117    *     50   0.0101  0.00562   0.0054   0.00   0.01
+
+Wait               118    5     50    0.009  0.00544  0.00531   0.02   0.08
+Wait               118    *     50    0.009  0.00544  0.00531   0.00   0.01
+
+Wait               123    5     50   0.0116  0.00662  0.00636   0.03   0.10
+Wait               123    *     50   0.0116  0.00662  0.00636   0.00   0.01
+
+Wait               128    4     50     5.82     5.57     5.41  23.52  85.31
+Wait               128    *     50     5.82     5.57     5.41   2.61  11.85
+
+Wait               129    4     50   0.0106   0.0065  0.00618   0.03   0.10
+Wait               129    *     50   0.0106   0.0065  0.00618   0.00   0.01
+
+Wait               132    4     50     8.88    0.561    0.361   2.37   8.60
+Wait               132    *     50     8.88    0.561    0.361   0.26   1.20
+
+Wait               134    4     50   0.0339   0.0101  0.00664   0.04   0.15
+Wait               134    *     50   0.0339   0.0101  0.00664   0.00   0.02
+
+Wait               137    4     50  0.00912  0.00549   0.0054   0.02   0.08
+Wait               137    *     50  0.00912  0.00549   0.0054   0.00   0.01
+
+Wait               138    4     50  0.00947  0.00577  0.00556   0.02   0.09
+Wait               138    *     50  0.00947  0.00577  0.00556   0.00   0.01
+
+Wait               139    4     50   0.0095  0.00566  0.00548   0.02   0.09
+Wait               139    *     50   0.0095  0.00566  0.00548   0.00   0.01
+
+Wait               144    4     50   0.0109  0.00631  0.00612   0.03   0.10
+Wait               144    *     50   0.0109  0.00631  0.00612   0.00   0.01
+
+Wait               149    7     50     7.94     0.32    0.099   1.35   4.83
+Wait               149    *     50     7.94     0.32    0.099   0.15   0.68
+
+Wait               150    7     50    0.197   0.0814   0.0071   0.34   1.23
+Wait               150    *     50    0.197   0.0814   0.0071   0.04   0.17
+
+Wait               153    7     50    0.376    0.107   0.0937   0.45   1.62
+Wait               153    *     50    0.376    0.107   0.0937   0.05   0.23
+
+Wait               155    7     50   0.0345   0.0106  0.00668   0.04   0.16
+Wait               155    *     50   0.0345   0.0106  0.00668   0.00   0.02
+
+Wait               158    7     50    0.015  0.00568  0.00545   0.02   0.09
+Wait               158    *     50    0.015  0.00568  0.00545   0.00   0.01
+
+Wait               159    7     50  0.00923  0.00549  0.00538   0.02   0.08
+Wait               159    *     50  0.00923  0.00549  0.00538   0.00   0.01
+
+Wait               160    7     50  0.00948  0.00562  0.00542   0.02   0.08
+Wait               160    *     50  0.00948  0.00562  0.00542   0.00   0.01
+
+Wait               165    7     50   0.0112  0.00656  0.00631   0.03   0.10
+Wait               165    *     50   0.0112  0.00656  0.00631   0.00   0.01
+
+Wait               170    6     50   0.0102   0.0056  0.00536   0.02   0.08
+Wait               170    *     50   0.0102   0.0056  0.00536   0.00   0.01
+
+Wait               171    6     50    0.212    0.115  0.00939   0.48   1.73
+Wait               171    *     50    0.212    0.115  0.00939   0.05   0.24
+
+Wait               174    6     50     9.44    0.287   0.0854   1.21   4.32
+Wait               174    *     50     9.44    0.287   0.0854   0.13   0.61
+
+Wait               176    6     50   0.0335  0.00899  0.00634   0.04   0.14
+Wait               176    *     50   0.0335  0.00899  0.00634   0.00   0.02
+
+Wait               179    6     50   0.0092  0.00556  0.00545   0.02   0.08
+Wait               179    *     50   0.0092  0.00556  0.00545   0.00   0.01
+
+Wait               180    6     50  0.00912  0.00551  0.00541   0.02   0.08
+Wait               180    *     50  0.00912  0.00551  0.00541   0.00   0.01
+
+Wait               181    6     50  0.00895  0.00546  0.00535   0.02   0.08
+Wait               181    *     50  0.00895  0.00546  0.00535   0.00   0.01
+
+Wait               186    6     50   0.0112  0.00683  0.00631   0.03   0.10
+Wait               186    *     50   0.0112  0.00683  0.00631   0.00   0.01
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Allreduce            7    0      50         8         8         8       400
+Allreduce            7    *      50         8         8         8       400
+
+Allreduce           28    1      50         8         8         8       400
+Allreduce           28    *      50         8         8         8       400
+
+Allreduce           49    2      50         8         8         8       400
+Allreduce           49    *      50         8         8         8       400
+
+Allreduce           70    3      50         8         8         8       400
+Allreduce           70    *      50         8         8         8       400
+
+Allreduce           92    8      50         8         8         8       400
+Allreduce           92    *      50         8         8         8       400
+
+Allreduce          112    5      50         8         8         8       400
+Allreduce          112    *      50         8         8         8       400
+
+Allreduce          133    4      50         8         8         8       400
+Allreduce          133    *      50         8         8         8       400
+
+Allreduce          154    7      50         8         8         8       400
+Allreduce          154    *      50         8         8         8       400
+
+Allreduce          175    6      50         8         8         8       400
+Allreduce          175    *      50         8         8         8       400
+
+Isend                3    0      50      8960      8960      8960  4.48e+05
+Isend                3    *      50      8960      8960      8960  4.48e+05
+
+Isend               10    0      50      8960      8960      8960  4.48e+05
+Isend               10    *      50      8960      8960      8960  4.48e+05
+
+Isend               14    0      50      8960      8960      8960  4.48e+05
+Isend               14    *      50      8960      8960      8960  4.48e+05
+
+Isend               20    0      50      8960      8960      8960  4.48e+05
+Isend               20    *      50      8960      8960      8960  4.48e+05
+
+Isend               24    1      50      8960      8960      8960  4.48e+05
+Isend               24    *      50      8960      8960      8960  4.48e+05
+
+Isend               31    1      50      8960      8960      8960  4.48e+05
+Isend               31    *      50      8960      8960      8960  4.48e+05
+
+Isend               35    1      50      8960      8960      8960  4.48e+05
+Isend               35    *      50      8960      8960      8960  4.48e+05
+
+Isend               41    1      50      8960      8960      8960  4.48e+05
+Isend               41    *      50      8960      8960      8960  4.48e+05
+
+Isend               45    2      50      8960      8960      8960  4.48e+05
+Isend               45    *      50      8960      8960      8960  4.48e+05
+
+Isend               52    2      50      8960      8960      8960  4.48e+05
+Isend               52    *      50      8960      8960      8960  4.48e+05
+
+Isend               57    2      50      8960      8960      8960  4.48e+05
+Isend               57    *      50      8960      8960      8960  4.48e+05
+
+Isend               62    2      50      8960      8960      8960  4.48e+05
+Isend               62    *      50      8960      8960      8960  4.48e+05
+
+Isend               66    3      50      8960      8960      8960  4.48e+05
+Isend               66    *      50      8960      8960      8960  4.48e+05
+
+Isend               73    3      50      8960      8960      8960  4.48e+05
+Isend               73    *      50      8960      8960      8960  4.48e+05
+
+Isend               78    3      50      8960      8960      8960  4.48e+05
+Isend               78    *      50      8960      8960      8960  4.48e+05
+
+Isend               83    3      50      8960      8960      8960  4.48e+05
+Isend               83    *      50      8960      8960      8960  4.48e+05
+
+Isend               87    8      50      8960      8960      8960  4.48e+05
+Isend               87    *      50      8960      8960      8960  4.48e+05
+
+Isend               94    8      50      8960      8960      8960  4.48e+05
+Isend               94    *      50      8960      8960      8960  4.48e+05
+
+Isend               97    8      50      8960      8960      8960  4.48e+05
+Isend               97    *      50      8960      8960      8960  4.48e+05
+
+Isend              103    8      50      8960      8960      8960  4.48e+05
+Isend              103    *      50      8960      8960      8960  4.48e+05
+
+Isend              109    5      50      8960      8960      8960  4.48e+05
+Isend              109    *      50      8960      8960      8960  4.48e+05
+
+Isend              115    5      50      8960      8960      8960  4.48e+05
+Isend              115    *      50      8960      8960      8960  4.48e+05
+
+Isend              121    5      50      8960      8960      8960  4.48e+05
+Isend              121    *      50      8960      8960      8960  4.48e+05
+
+Isend              125    5      50      8960      8960      8960  4.48e+05
+Isend              125    *      50      8960      8960      8960  4.48e+05
+
+Isend              130    4      50      8960      8960      8960  4.48e+05
+Isend              130    *      50      8960      8960      8960  4.48e+05
+
+Isend              136    4      50      8960      8960      8960  4.48e+05
+Isend              136    *      50      8960      8960      8960  4.48e+05
+
+Isend              142    4      50      8960      8960      8960  4.48e+05
+Isend              142    *      50      8960      8960      8960  4.48e+05
+
+Isend              146    4      50      8960      8960      8960  4.48e+05
+Isend              146    *      50      8960      8960      8960  4.48e+05
+
+Isend              151    7      50      8960      8960      8960  4.48e+05
+Isend              151    *      50      8960      8960      8960  4.48e+05
+
+Isend              157    7      50      8960      8960      8960  4.48e+05
+Isend              157    *      50      8960      8960      8960  4.48e+05
+
+Isend              164    7      50      8960      8960      8960  4.48e+05
+Isend              164    *      50      8960      8960      8960  4.48e+05
+
+Isend              167    7      50      8960      8960      8960  4.48e+05
+Isend              167    *      50      8960      8960      8960  4.48e+05
+
+Isend              172    6      50      8960      8960      8960  4.48e+05
+Isend              172    *      50      8960      8960      8960  4.48e+05
+
+Isend              178    6      50      8960      8960      8960  4.48e+05
+Isend              178    *      50      8960      8960      8960  4.48e+05
+
+Isend              185    6      50      8960      8960      8960  4.48e+05
+Isend              185    *      50      8960      8960      8960  4.48e+05
+
+Isend              188    6      50      8960      8960      8960  4.48e+05
+Isend              188    *      50      8960      8960      8960  4.48e+05
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------
